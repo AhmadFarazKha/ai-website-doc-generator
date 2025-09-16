@@ -1,0 +1,7 @@
+[theme]
+base="dark"
+primaryColor="#3A86FF" # A strong blue for tech/automation
+backgroundColor="#121212"
+secondaryBackgroundColor="#1C1C1C"
+textColor="#FFFFFF"
+font="sans serif"

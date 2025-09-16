@@ -1,0 +1,150 @@
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+/* Base Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Main Streamlit App Container */
+.main {
+    background-color: var(--background-color); /* From config.toml */
+    color: var(--text-color); /* From config.toml */
+}
+
+/* Reduce default padding for better centering */
+.st-emotion-cache-z5fcl4 { /* This targets the main content area */
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Hide Streamlit's default header (hamburger menu) - if you want it back, remove this */
+.stApp > header {
+    background-color: transparent !important;
+    height: 0px;
+    visibility: hidden;
+    display: none;
+}
+
+/* Headings */
+h1 {
+    color: var(--primary-color); /* From config.toml */
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+}
+
+h3 {
+    color: var(--primary-color); /* From config.toml */
+    font-weight: 600;
+    margin-top: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(var(--primary-color-rgb), 0.3);
+}
+
+p {
+    line-height: 1.6;
+    color: var(--text-color); /* From config.toml */
+}
+
+/* Input Fields (Text Area, Text Input, Selectbox, File Uploader Label) */
+.stTextArea label,
+.stTextInput label,
+.stFileUploader label,
+.stSelectbox label {
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+}
+
+.stTextArea>div>div>textarea,
+.stTextInput>div>div>input,
+.stSelectbox>div>div {
+    background-color: var(--secondary-background-color); /* From config.toml */
+    color: var(--text-color); /* From config.toml */
+    border: 1px solid var(--primary-color); /* From config.toml */
+    border-radius: 8px;
+    padding: 10px 15px;
+}
+
+.stTextArea>div>div>textarea:focus,
+.stTextInput>div>div>input:focus,
+.stSelectbox>div:focus-within {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(var(--primary-color-rgb), 0.4);
+}
+
+/* File Uploader Button (Specific styling for its button) */
+.stFileUploader>div>div>button {
+    background-color: var(--secondary-background-color);
+    color: white;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+.stFileUploader>div>div>button:hover {
+    background-color: rgba(var(--secondary-background-color-rgb), 0.8);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    transform: translateY(-1px);
+}
+.stFileUploader>div>div>p { /* Text next to file uploader */
+    color: var(--text-color);
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+/* Primary Action Buttons */
+.stButton>button {
+    background-color: var(--primary-color); /* From config.toml */
+    color: white;
+    border-radius: 8px;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.stButton>button:hover {
+    background-color: rgba(var(--primary-color-rgb), 0.8);
+}
+
+/* Secondary/Clear/Download Buttons */
+.stButton:nth-of-type(2)>button, /* Targets the second button in a group, typically "Clear" */
+.stDownloadButton>button {
+    background-color: var(--secondary-background-color); /* From config.toml */
+    color: var(--primary-color); /* From config.toml */
+    border: 1px solid var(--primary-color); /* From config.toml */
+}
+
+.stButton:nth-of-type(2)>button:hover,
+.stDownloadButton>button:hover {
+    background-color: rgba(var(--secondary-background-color-rgb), 0.8);
+    color: var(--primary-color);
+}
+
+.stDownloadButton>button {
+    margin-top: 1rem;
+    padding: 10px 20px;
+}
+
+/* Spinner Color */
+.stSpinner > div > div > div {
+    color: var(--primary-color) !important;
+}
+
+/* Footer Text */
+.footer-text {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #a0a0a0; /* Direct gray color for subtle text */
+    margin-top: 3rem;
+}
